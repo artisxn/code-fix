@@ -1,0 +1,54 @@
+{
+    "name": "codicastudio/code-fix",
+    "description": "A noobs worthless garbage, just learning.",
+    "keywords": [
+        "worthless garabage by a noob."
+    ],
+    "homepage": "https://github.com/codicastudio/code-fix",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael J Brown",
+            "email": "codicastudiodev@gmail.com",
+            "homepage": "https://codicastudio.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php" : "^7.4.8",
+        "laravel/framework": "^7.0.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "files": [
+            "src/helpers.php"
+        ],
+        "psr-4": {
+            "codicastudio\\LaravelMicroscope\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "codicastudio\\LaravelMicroscope\\": "src",
+            "codicastudio\\LaravelMicroscope\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "codicastudio\\LaravelMicroscope\\LaravelMicroscopeServiceProvider"
+            ]
+        }
+    }
+}
